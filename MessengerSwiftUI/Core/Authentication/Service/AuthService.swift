@@ -48,7 +48,7 @@ class AuthService {
         do {
             try Auth.auth().signOut() // signs out on backend
             self.userSession = nil // updates routing logic
-            UserService.shared.$currentUser = nil
+            UserService.shared.currentUser = nil
         } catch {
             print("DEBUG: Failed to sign out with error \(error.localizedDescription)")
         }
